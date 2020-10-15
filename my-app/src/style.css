@@ -1,0 +1,16 @@
+.ui.borderless.topmenu.menu {
+  background-color: black;
+  box-shadow: none;
+  border: none;
+}
+
+.ui.borderless.middlemenu.menu {
+  box-shadow: none;
+  border: none;
+}
+
+.footer-background {
+  background-color: darkorange;
+
+  border: none;
+}
