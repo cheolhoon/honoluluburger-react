@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import 'semantic-ui-css/semantic.min.css';
-import { Dropdown, Grid, Image, Form, Button, List, Menu } from 'semantic-ui-react';
+import { Dropdown, Grid, Image, Form, Button, List, Menu, Icon } from 'semantic-ui-react';
 
 class HonoluluBurgerLogo extends React.Component {
   render() {
     return (
-        <Image src="https://dekkagency.com/honoluluburgerco/wp-content/uploads/2018/06/honolulu-burger-co.png"
-               alt="logo"
-               centered/>
+        <div className="top-background">
+          <Image src="https://dekkagency.com/honoluluburgerco/wp-content/uploads/2018/06/honolulu-burger-co.png"
+                 width="170px" alt="logo"
+                 centered/>
+        </div>
     )
   }
 }
@@ -17,22 +19,25 @@ class HonoluluBurgerLogo extends React.Component {
 class TopMenu extends React.Component {
   render() {
     return (
-        <Menu borderless className="topmenu">
-          <Grid container centered>
-            <Menu.Item>HOME</Menu.Item>
-            <Dropdown.item text='MENUS'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Order Takeout</Dropdown.Item>
-                <Dropdown.Item>Japanese Menu</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown.item>
-            <Menu.Item>ABOUT</Menu.Item>
-            <Menu.Item>LOCATION</Menu.Item>
-            <Menu.Item>SPECIALS</Menu.Item>
-            <Menu.Item>MERCHANDISE</Menu.Item>
-            <Menu.Item>THE BUZZ</Menu.Item>
-          </Grid>
-        </Menu>
+
+        <div className="topmenu">
+          <Menu borderless className="ui borderless menu">
+            <Grid container centered>
+              <Menu.Item color='orange'>HOME</Menu.Item>
+              <Dropdown item text='MENUS'>
+                <Dropdown.Menu>
+                  <Dropdown.Item>Order Takeout</Dropdown.Item>
+                  <Dropdown.Item>Japanese Menu</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              <Menu.Item>ABOUT</Menu.Item>
+              <Menu.Item>LOCATION</Menu.Item>
+              <Menu.Item>SPECIALS</Menu.Item>
+              <Menu.Item>MERCHANDISE</Menu.Item>
+              <Menu.Item>THE BUZZ</Menu.Item>
+            </Grid>
+          </Menu>
+        </div>
     )
   }
 }
@@ -50,6 +55,7 @@ class FullWidthImage extends React.Component {
 class MiddleMenu extends React.Component {
   render() {
     return (
+
         <Menu borderless className='middlemenu'>
           <Grid container columns={3}>
             <Grid.Column>
@@ -63,7 +69,7 @@ class MiddleMenu extends React.Component {
                 </List.Item>
                 <Form>
                   <Form.Input>
-                    <Button>ORDER TAKEOUT</Button>
+                    <Button color='orange'>ORDER TAKEOUT</Button>
                   </Form.Input>
                 </Form>
               </List>
@@ -79,7 +85,7 @@ class MiddleMenu extends React.Component {
                 </List.Item>
                 <Form>
                   <Form.Input>
-                    <Button>FOOD TRUCK</Button>
+                    <Button color='orange'>FOOD TRUCK</Button>
                   </Form.Input>
                 </Form>
               </List>
@@ -90,12 +96,12 @@ class MiddleMenu extends React.Component {
                   <Image src="https://honoluluburgerco.com/wp-content/uploads/2018/06/HBC-burger-icon.png"
                          alt="burger-icon" centered/>
                 </List.Item>
-                <List.Item>We are always putting out new specials and promotions for big and
+                <List.Item color='black'>We are always putting out new specials and promotions for big and
                   small cravings. Check our Specials and Instagram page for the latest deals.
                 </List.Item>
                 <Form>
                   <Form.Input>
-                    <Button>SPECIAL</Button>
+                    <Button color='orange'>SPECIAL</Button>
                   </Form.Input>
                 </Form>
               </List>
@@ -106,37 +112,60 @@ class MiddleMenu extends React.Component {
   }
 }
 
-class FooterMenu extends React.Component {
+class FooterImage extends React.Component {
   render() {
     return (
-        <Menu borderless className='footermenu'>
-          <Menu.Item>
-            <Image
-                src="https://scontent-iad3-1.cdninstagram.com/v/t51.29350-15/121366495_104291714742295_1986660493820093494_n.jpg?_nc_cat=109&_nc_sid=8ae9d6&_nc_ohc=2Ts-ZZysZgcAX-4p8EL&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=2bdcde4631755eb30bbebf423d11bc9d&oe=5FAEB956"
-                width="150px" alt=""/>
-          </Menu.Item>
-          <Menu.Item>
-            <Image
-                src="https://scontent-iad3-1.cdninstagram.com/v/t51.29350-15/120973712_3287826494606031_7745300155584556544_n.jpg?_nc_cat=110&_nc_sid=8ae9d6&_nc_ohc=ryYFIGEFeiYAX--j1hB&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=d967973bc786d0c3964fd8ef99ce2bf7&oe=5FAEBBB9"
-                width="150px" alt=""/>
-          </Menu.Item>
-          <Menu.Item>
-            <Image
-                src="https://scontent-iad3-1.cdninstagram.com/v/t51.29350-15/120844151_981031925698990_1902316528678192751_n.jpg?_nc_cat=105&_nc_sid=8ae9d6&_nc_ohc=xP0qnMVvKLMAX-_-hjv&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=f8770c6bc2e12b2cf88a727dc1edf815&oe=5FAE4D61"
-                width="150px" alt=""/>
-          </Menu.Item>
-          <Menu.Item>
-            <Image
-                src="https://scontent-iad3-1.cdninstagram.com/v/t51.29350-15/119993067_760503727857081_8621889021097275721_n.jpg?_nc_cat=104&_nc_sid=8ae9d6&_nc_ohc=mj1zyXtlnJkAX9Xc98X&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=b486caa2267a5241be430d3e7179e47c&oe=5FAC71D8"
-                width="150px" alt=""/>
-          </Menu.Item>
+        <Image
+            src="https://i.ibb.co/0t4qWcP/burger.png"
+            alt="" fluid/>
+    )
+  }
+}
+
+class FooterButton extends React.Component {
+  render() {
+    return (
+
+        <Menu container borderless className='footerbutton'>
+          <Grid container centered>
+            <List>
+              <Form>
+                <Form.Input>
+                  <Button color='gray' position="right">Load More...</Button>
+                  <Button color='light blue'>
+                    <Menu.Item>
+                      <Icon name="instagram icon"/>Follow on Instagram
+                    </Menu.Item>
+                  </Button>
+                </Form.Input>
+              </Form>
+            </List>
+          </Grid>
+        </Menu>
+
+    )
+  }
+}
+
+class FooterLocation extends React.Component {
+  render() {
+    return (
+        <Menu container borderless className='footerlocation'>
+          <Grid container centered>
+            <List>
+              <List.Item>LOCATION</List.Item>
+              <List.Item>1295 S. Beretania St. Honolulu, HI 96814</List.Item>
+              <List.Item>Sun-Tues: 11am-6pm</List.Item>
+              <List.Item>Wed-Sat: 11am-8pm</List.Item>
+              <List.Item>Free Parking off Beretania Street</List.Item>
+            </List>
+          </Grid>
         </Menu>
     )
   }
 }
 
 class HonoluluBurger extends React.Component {
-
   render() {
     return (
         <div>
@@ -144,7 +173,9 @@ class HonoluluBurger extends React.Component {
           <TopMenu/>
           <FullWidthImage/>
           <MiddleMenu/>
-          <FooterMenu/>
+          <FooterImage/>
+          <FooterButton/>
+          <FooterLocation/>
         </div>
     );
   }

@@ -1,18 +1,39 @@
-.ui.borderless.topmenu.menu {
+.top-background {
   background-color: black;
   color: white;
-  box-shadow: none;
-  border: none;
-}
-
-
-.middle-background{
-  background-color: darkorange;
-  border: none;
-  padding-top: 30px;
-}
-
-.footer-background{
-  background-color: black;
   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.ui.borderless.menu{
+  background-color: black;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.ui.borderless.menu .item{
+  color: white;
+}
+
+.ui.borderless.middlemenu.menu{
+  background-color: darkorange;
+  border: 0;
+  box-shadow: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.ui.borderless.middlemenu.menu .item{
+  color: black;
+}
+
+.ui.footerbutton.menu {
+  padding-top: 35px;
+}
+
+.ui.footerlocation.menu {
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
